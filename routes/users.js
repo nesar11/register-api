@@ -25,7 +25,7 @@ reouter.get('/create', function(req, res){
 */
 
 /* POST users listing..*/
-router.get('/insert', function (req, res) {
+router.post('/insert', function (req, res) {
   if(req.body.message === undefined || req.body.message === "") {
       return res.json({success: false, err: "message is missing "});
   }

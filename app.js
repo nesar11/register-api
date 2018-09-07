@@ -13,10 +13,10 @@ var users = require('./routes/users');
 var app = express();
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://root:PassW@1@ds011024.mlab.com:11024/registerbd");
+mongoose.connect("mongodb://reg0123:ae12345@ds011024.mlab.com:11024/registerbd", {useNewUrlParser: true});
 
 mongoose.connection.on("error", function(err){
-    console.error(err.message);
+    console.error(err.message);  
 });
 
 // view engine set up
