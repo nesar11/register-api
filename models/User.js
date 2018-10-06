@@ -3,6 +3,7 @@ var userSchema = mongoose.Schema({
     message:String,
     name:String,
     email : String,
+    password: String,
     company: String,
     mobile: Number,
     industry: String,

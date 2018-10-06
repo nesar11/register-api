@@ -35,6 +35,9 @@ router.post('/insert', function (req, res) {
     if(req.body.email === undefined || req.body.email === "") {
         return res.json({success: false, err: "email is missing "});
     }
+    if(req.body.password === undefined || req.body.password === "") {
+        return res.json({success: false, err: "password is missing "});
+    }
     if(req.body.company === undefined || req.body.company === "") {
         return res.json({success: false, err: "company is missing "});
     }
@@ -51,6 +54,7 @@ router.post('/insert', function (req, res) {
         message: req.body.message,
         name: req.body.name,
         email : req.body.email,
+        password: req.body.password,
         company: req.body.company,
         mobile: req.body.mobile,
         industry: req.body.industry,
